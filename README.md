@@ -2,7 +2,7 @@
 .Net application Sample
 
 
-## Commands
+## .Net Commands
 
 ```bash
 # Check version
@@ -31,4 +31,11 @@ dotnet run
 
 # Install package
 dotnet add package Microsoft.Extensions.Configuration
+```
+
+## Docker commands
+
+```bash
+# Build the image
+docker build -t dotnet:v1 .
 ```
