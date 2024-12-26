@@ -39,6 +39,10 @@ dotnet add package Microsoft.Extensions.Configuration
 # Build the image
 docker build -t dotnet:v1 .
 
+# Build to support amd64
+docker buildx create --use
+docker buildx build --platform linux/amd64,linux/arm64 -t josefloressv/dotnet:v2 --push .
+
 # Run the app
 docker run -itd -p 8080:8080 dotnet:v1
 
